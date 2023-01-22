@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <LangVersion>10</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Kpa.Assessment.Database\Kpa.Assessment.Database.csproj" />
+      <ProjectReference Include="..\Kpa.Assessment.Shared\Kpa.Assessment.Shared.csproj" />
+    </ItemGroup>
+
+</Project>

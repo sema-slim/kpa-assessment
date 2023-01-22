@@ -2,12 +2,17 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Kpa.Assessment.Application\Kpa.Assessment.Application.csproj" />
+      <ProjectReference Include="..\Kpa.Assessment.Database\Kpa.Assessment.Database.csproj" />
+      <ProjectReference Include="..\Kpa.Assessment.Shared\Kpa.Assessment.Shared.csproj" />
     </ItemGroup>
 
 </Project>
