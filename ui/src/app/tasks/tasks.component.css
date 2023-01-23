@@ -1,0 +1,22 @@
+.alignSelfCenter {
+  display: flex;
+  align-self: center;
+}
+
+.mCardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 10px 50px;
+}
+
+.mCard {
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
+  margin: 5px;
+}
+
+.mRow {
+  display: flex;
+}

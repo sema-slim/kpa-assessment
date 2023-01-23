@@ -1,0 +1,11 @@
+<div class="mCardContainer">
+  <h2>Tasks</h2>
+  <div class="mRow">
+    <div class="card mCard" style="width: 18rem" *ngFor="let task of tasks">
+      <div class="card-body">
+        <h5 class="card-title">{{ task.title }}</h5>
+        <p class="card-text">{{ task.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

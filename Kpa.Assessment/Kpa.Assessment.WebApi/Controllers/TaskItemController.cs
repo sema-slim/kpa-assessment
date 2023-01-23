@@ -1,5 +1,6 @@
 using Kpa.Assessment.Application;
 using Kpa.Assessment.Application.Interfaces;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Kpa.Assessment.WebApi.Controllers;
@@ -41,15 +42,15 @@ public class TaskItemController : Controller
     [HttpPost("")]
     public async Task<IActionResult> Create()
     {
-        return await _creator.Create().ToHttpJsonResponse();
+        return await _creator.Create()
+            .ToHttpJsonResponse();
     }
     
     // stub
-    // I understand that this isn't strictly how routes would be handled 
-    // if being restful is the goal. Wasn't sure if you guys prefer strict adherence to rest constraints
     [HttpPost("{taskItemId}/update")]
     public async Task<IActionResult> Update()
     {
-        return await _creator.Create().ToHttpJsonResponse();
+        return await _updater.Update()
+            .ToHttpJsonResponse();
     }
 }

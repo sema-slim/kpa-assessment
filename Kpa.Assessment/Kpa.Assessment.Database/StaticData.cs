@@ -12,7 +12,7 @@ public static class StaticData
         {
             TaskItemId = 1,
             Title = "Get a Job at KPA",
-            Description = "",
+            Description = "KPA seems like a great place to work, and the need for OSHA compliance isn't going out of fashion any time soon",
             AssigneeUserId = 1234,
             AssigneeUserName = "jmulla",
             CreatedOn = DateTimeOffset.UtcNow,
@@ -22,7 +22,7 @@ public static class StaticData
         {
             TaskItemId = 2,
             Title = "Become a pro at angular",
-            Description = "",
+            Description = "Angular is among the most popular ui frameworks in use today. Having experience in it would make a great addition to your existing tool kit",
             CreatedOn = DateTimeOffset.UtcNow,
             UpdatedOn = DateTimeOffset.UtcNow,
         },
