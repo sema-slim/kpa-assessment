@@ -1,0 +1,27 @@
+My general approach here was to start with basic operations at the application level before filling out the corresponding
+code at the controller level and infrastructure level. In a real world scenario, this allows me to concentrate on the 
+"business" behavior of the api and allow other aspects to follow suit. There are a lot of different ways to encapsulate
+business logic, but I generally try to keep as much of it as possible in "domain" entities.
+
+Below is some pseudo for creating and editing tasks
+
+createTask(request)
+    validate(request)
+    if is invalid request then return bad request
+
+    task = Task.create(request) // a factory method would be used to initialize a new task 
+    
+    t = save(task) // save to db
+    return(t) // return the new task with id to consumer
+
+// in my code, I have one single "update" method but in real world scenarios I like to break updates into
+// pieces that make sense to a non technical person
+// this help keeps operations from becoming too large and unruly and also makes communication with stake holders 
+// much easier
+unassignTask(taskId)
+    var task = getTask(taskId) // get task from db
+    if task not found then return 404
+
+    task.unassign() 
+
+    save(task)
